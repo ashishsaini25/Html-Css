@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <title>Flex</title>
+        <style>
+body{
+    padding: 2en;
+}
+.headercontainer{
+    display:flex;
+    justify-content: center;
+    flex-flow: column;
+    align-content: center;
+    background-color: tomato;
+    font-weight: bold;
+    padding: 10px;
+}
+.footercontainer{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background-color: antiquewhite;
+    font-weight: bold;
+    padding: 10px;
+
+}
+.maincontainer{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    font-weight: bold;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.mainContentItem{
+    text-align: left;
+    background-color: deepskyblue;
+}
+article{
+    background-color: bisque;
+    padding: 10px;
+    background-color: aqua;
+    margin: 10px;
+}
+.mainContentItem{
+    flex:3 0px;
+}
+.sideBarItem{
+
+    flex: 1 0 0;
+    border: 0px solid green;
+
+
+}
+.sideBarRightItem{
+background-color: burlywood;
+}
+.sideBarLeftItem{
+    background-color: chartreuse;
+}
+
+        </style>
+    </head>
+    <body>
+        <header class="headercontainer"><h1>Header</h1></header>
+        <div class="maincontainer">
+            <sideBar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left side bar</p></div></sideBar>
+        <section class="mainContentItem">
+            <article>
+                <h2>First Article</h2>
+                <p>In ancient manuscripts, another mean to divide sentences into paragraphs was a line break (newline) followed by an initial at the beginning of the next paragraph. An initial is an oversized capital letter, sometimes outdented beyond the margin of the text. This style can be seen, for example, in the original Old English manuscript of Beowulf. Outdenting is still used in English typography, though not commonly.[3] Modern English typography usually indicates a new paragraph by indenting the first line. This style can be seen in the (handwritten) United States Constitution from 1787. For additional ornamentation, a hedera leaf or other symbol can be added to the inter-paragraph white space, or put in the indentation space.</p>
+            </article>
+            <article>
+                <h2>Second Article</h2>
+                <p>In ancient manuscripts, another mean to divide sentences into paragraphs was a line break (newline) followed by an initial at the beginning of the next paragraph. An initial is an oversized capital letter, sometimes outdented beyond the margin of the text. This style can be seen, for example, in the original Old English manuscript of Beowulf. Outdenting is still used in English typography, though not commonly.[3] Modern English typography usually indicates a new paragraph by indenting the first line. This style can be seen in the (handwritten) United States Constitution from 1787. For additional ornamentation, a hedera leaf or other symbol can be added to the inter-paragraph white space, or put in the indentation space.</p>
+            </article>
+            <article>
+                <h2>Third Article</h2>
+                <p>In ancient manuscripts, another mean to divide sentences into paragraphs was a line break (newline) followed by an initial at the beginning of the next paragraph. An initial is an oversized capital letter, sometimes outdented beyond the margin of the text. This style can be seen, for example, in the original Old English manuscript of Beowulf. Outdenting is still used in English typography, though not commonly.[3] Modern English typography usually indicates a new paragraph by indenting the first line. This style can be seen in the (handwritten) United States Constitution from 1787. For additional ornamentation, a hedera leaf or other symbol can be added to the inter-paragraph white space, or put in the indentation space.</p>
+            </article>
+        </section>
+            <sideBar class="sideBarItem sideBarRightItem"><div class="center"><p>Right side bar</p></div></sideBar>
+        </div>
+        <footer class="footercontainer">Footer</footer>
+
+    </body>
+</html>
