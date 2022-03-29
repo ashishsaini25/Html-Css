@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Basic Input Form</title>
+        <link rel="stylesheet" href="../css/form.css">
+    </head>
+    <body>
+        <form>
+            <header class="headerContainer"><h1>HTML5  Form input field</h1></header>
+            <div>
+                <label for="fullname">Name:</label>
+                <input type="text" id="fullname" name="fullname">
+                <error-output class="text-error" for="fullname"></error-output>
+            </div>
+            <div>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd">
+            </div>
+            <div>
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email">
+            </div>
+            <div>
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url">
+            </div>
+            <div>
+                <label for="number">PhoneNumber:</label>
+                <input type="number" id="number" name="number">
+            </div>
+            <div>
+                <label for="search">Search</label>
+                <input type="search" id="search" name="search">
+            </div>
+            <div>
+                <label for="salery">Salery</label>
+                <input type="range" id="salery" name="text" min="200000" max="500000" step="100" value="400000">
+                <output class="salery_Output" for="salery">40000</output>
+            </div>
+            <div class="nativeDateTimePicker">
+                <label for="party">Date and Time</label>
+                <input type="datetime-local" id="party" name="bday">
+                <span class="validity"></span>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+        <script>
+            const text=document.querySelector('#fullname');
+            const text_error=document.querySelector('.text-error');
+            text.addEventListener('input',function(){
+                let nameRegex=RegExp('^[A-Z]{1}[a-z]{2,}$');
+                if(nameRegex.test(text.value))
+                {
+                text_error.textContent="";
+                }
+                else{
+                text_error.textContent="Name is incorrect";
+                }
+            });
+
+            const salery=document.querySelector('#salery');
+            const output=document.querySelector('.salery_Output');
+            output.textContent=salery.value;
+            salery.addEventListener('input',function(){
+                output.textContent=salery.value;
+            });
+        </script>
+    </body>
+
+
+</html>
